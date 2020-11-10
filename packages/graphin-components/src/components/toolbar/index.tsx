@@ -90,34 +90,34 @@ const Toolbar: React.FC<ToolbarProps> = (props) => {
   buttonCfg = [
     {
       id: 'fullscreen',
-      name: fullscreen ? '还原' : '全屏',
+      name: fullscreen ? 'Reduction' : 'Full screen',
       icon: fullscreen ? <FullscreenExitOutlined /> : <FullscreenOutlined />,
       disabled: false,
       action: toggleFullscreen,
     },
     {
       id: 'zoomIn',
-      name: '放大',
+      name: 'Zoom In',
       icon: <ZoomInOutlined />,
       disabled: zoom >= MAX_ZOOM,
       action: () => handleGraphZoom(true),
     },
     {
       id: 'zoomOut',
-      name: '缩小',
+      name: 'Zoom Out',
       icon: <ZoomOutOutlined />,
       disabled: zoom <= MIN_ZOOM,
       action: () => handleGraphZoom(false),
     },
     {
       id: 'fishEye',
-      name: fishEyeState ? '关闭鱼眼放大镜' : '开启鱼眼放大镜',
+      name: fishEyeState ? 'Close Fish Eye' : 'Open Fish Eye',
       icon: fishEyeState ? <EyeInvisibleOutlined /> : <EyeOutlined />,
       action: toggleFishEye,
     },
     {
       id: 'undo',
-      name: `撤销操作,进度:${historyInfo.currentStep} / ${historyInfo.allStep}`,
+      name: `Undo, progress:${historyInfo.currentStep} / ${historyInfo.allStep}`,
       icon: <UndoOutlined />,
       disabled: false,
       action: () => {
@@ -136,7 +136,7 @@ const Toolbar: React.FC<ToolbarProps> = (props) => {
     },
     {
       id: 'redo',
-      name: `重做操作,进度:${historyInfo.currentStep} / ${historyInfo.allStep}`,
+      name: `Redo, progress:${historyInfo.currentStep} / ${historyInfo.allStep}`,
       icon: <RedoOutlined />,
       disabled: false,
       action: () => {
